@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.zip.GZIPInputStream;
 
 public class Decompressor {
+//    METHOD FO DECOMPRESSING A FILE.
     public static void method(File compressedFile, File decompressedFile) throws IOException {
         try (FileInputStream fis = new FileInputStream(compressedFile);
              GZIPInputStream gzipInput = new GZIPInputStream(fis);
@@ -16,11 +17,12 @@ public class Decompressor {
             int len;
 
             while((len = gzipInput.read(buffer)) != -1) {
+//                READ COMPRESSED DARA FROM THE INPUT FILE, DECOMPRESS IT, AND WRITE IT TO THE OUTPUT FILE.
                 fos.write(buffer, 0, len);
             }
         }
     }
     public static void main(String[] args) {
-
+//        ENTRY POINT FOR TESTING THE DECOMPRESSOR.
     }
 }
