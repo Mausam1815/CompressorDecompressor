@@ -63,7 +63,10 @@ public class AppFrame extends JFrame implements ActionListener {
 
             if(chosenOption == JFileChooser.APPROVE_OPTION) {
                 File compressedFile = fileChooser.getSelectedFile();
-                File decompressedFile = new File(compressedFile.getAbsolutePath().replace(".gz", ""));
+                String fileName = compressedFile.getAbsolutePath();
+                fileName = getFileName(fileName);
+                System.out.println(fileName);
+                File decompressedFile = new File(fileName.replace(".gz", ""));
 
                 try {
                     Decompressor.method(compressedFile, decompressedFile);
@@ -72,5 +75,19 @@ public class AppFrame extends JFrame implements ActionListener {
                 }
             }
         }
+    }
+    public static String getFileName(String fileName ) {
+        StringBuilder sb = new StringBuilder(fileName);
+        int dotCount = 0;
+        for(int i=sb.length()-1; i>=0; i--) {
+            if(dotCount == 2) {
+                sb.insert(i+1, "(decompressed)");
+                break;
+            }
+            if(sb.charAt(i) == '.') {
+                dotCount++;
+            }
+        }
+        return sb.toString();
     }
 }
