@@ -40,15 +40,3 @@ This project uses the following libraries:
 - Java GZIP Compression: Utilized in the `Compressor` and `Decompressor` classes for compressing and decompressing files.
 
 No additional dependencies are required.
-
-## Contributing
-
-Contributions to this project are welcome! If you have any ideas for improvements or new features, please feel free to submit issues or pull requests.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-Enjoy compressing and decompressing files with ease using this Java Swing-based application! If you encounter any issues or have suggestions for improvements, please don't hesitate to let us know.
