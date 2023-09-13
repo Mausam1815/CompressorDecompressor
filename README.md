@@ -30,7 +30,7 @@ The project is organized into the following packages:
 3. **Decompressing a File:**
    - Click the "Select File to Decompress" button.
    - Choose the compressed file (with a `.gz` extension) you want to decompress using the file chooser dialog.
-   - The decompressed file will be saved in the same directory without the `.gz` extension.
+   - The decompressed file will be saved in the same directory without the `.gz` extension and file name will contain `(decompressed)`.
 
 ## Dependencies
 
